@@ -30,11 +30,7 @@ int main(void){
 
         }
     }
-    if(msgctl(msgid,IPC_RMID,NULL)==-1){
-        perror("msgctl");
-        exit(1);
 
-    }
     return 0;
 
 }
