@@ -23,9 +23,7 @@ int main(void){
     printf("enter the text");
     msg.mtype=1;
     while(gets(msg.msgtxt),!feof(stdin)){
-        if(msgsnd(msgid,&msg,sizeof(msg),0)=="end"){
-            exit(1);
-    }
+      
         if(msgsnd(msgid,&msg,sizeof(msg),0)==-1){
                 perror("msgsnd");
                 exit(1);
